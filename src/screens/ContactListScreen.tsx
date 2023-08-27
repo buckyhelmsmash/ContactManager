@@ -8,7 +8,7 @@ type ContactListProps = NativeStackScreenProps<RootParamsList, 'ContactList'>
 const ContactListScreen = ({navigation}: ContactListProps) => {
     return(
         <View>
-            <Text>Contact List</Text>
+            <Text className={"text-red-700"}>Contact List</Text>
             <Button
                 title={'Detail'}
                 onPress={() => navigation.navigate("ContactDetail", {id: "123"})}
