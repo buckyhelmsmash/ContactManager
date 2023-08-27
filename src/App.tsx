@@ -2,7 +2,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 import store, {persistor} from '../store/store';
-import {Text} from "react-native";
 import ContactListScreen from "./screens/ContactListScreen";
 import ContactDetailScreen from "./screens/ContactDetailScreen";
 import {NavigationContainer} from "@react-navigation/native";
@@ -23,13 +22,6 @@ function App(): React.JSX.Element {
                 <NavigationContainer>
                     <Stack.Navigator
                         initialRouteName={'ContactList'}
-                        screenOptions={{
-                            headerRight: props => {
-                                return(
-                                    <Text className={"text-black text-sm font-bold"}>0 of 200</Text>
-                                )
-                            }
-                        }}
                     >
                         <Stack.Screen
                             name={'ContactList'}
