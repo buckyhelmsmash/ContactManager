@@ -1,79 +1,64 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Contact Manager - React Native App
 
-# Getting Started
+Welcome to the **Contact Manager** React Native app! This app allows you to manage your contacts using a user-friendly interface and a set of powerful features. You can easily add, edit, and delete contacts, and the app utilizes various libraries to provide a smooth and engaging user experience.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Table of Contents
 
-## Step 1: Start the Metro Server
+- [Installation](#installation)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+- [UI Libraries](#ui-libraries)
+- [State Management](#state-management)
+- [Persistence](#persistence)
+- [Contributing](#contributing)
+- [License](#license)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Installation
 
-To start Metro, run the following command from the _root_ of your React Native project:
+To get started with the Contact Manager app, follow these steps:
 
-```bash
-# using npm
-npm start
+1. Clone the repository: `git clone https://github.com/buckyhelmsmash/ContactManager.git`
+2. Navigate to the project directory: `cd ContactManager`
+3. Install the project dependencies: `npm install`
 
-# OR using Yarn
-yarn start
-```
+## Dependencies
 
-## Step 2: Start your Application
+The Contact Manager app relies on the following key dependencies:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+- **@react-navigation/native** and **@react-navigation/native-stack**: Used for navigation within the app.
+- **@react-native-material/core**: Provides UI components for a polished and consistent look.
+- **react-native-swipe-list-view**: Enables swipeable lists for a seamless user experience.
+- **@reduxjs/toolkit** and **react-redux**: Implement state management using Redux.
+- **redux-persist** and **@react-native-async-storage/async-storage**: Manage and persist state using AsyncStorage.
 
-### For Android
+For a complete list of dependencies, refer to the [package.json](https://github.com/buckyhelmsmash/ContactManager/blob/main/package.json) file.
 
-```bash
-# using npm
+## Usage
+
+To run the app on an Android emulator or device, use the following command:
+
+```sh
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### For iOS
+This command will start the development server and launch the app on the connected Android device.
 
-```bash
-# using npm
-npm run ios
+## UI Libraries
 
-# OR using Yarn
-yarn ios
-```
+The Contact Manager app utilizes the `@react-native-material/core` library for its UI components. This library provides a consistent and attractive design to enhance the user experience.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## State Management
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+State management in the Contact Manager app is implemented using **Redux** along with the **@reduxjs/toolkit** and **react-redux** packages. Redux enables centralized state management, making it easier to manage and share data across different components.
 
-## Step 3: Modifying your App
+## Persistence
 
-Now that you have successfully run the app, let's modify it.
+The app uses **redux-persist** in combination with **@react-native-async-storage/async-storage** to persist the Redux store data in the device's local storage. This ensures that user data and preferences are preserved even if the app is closed or restarted.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Contributing
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+Contributions to the Contact Manager app are welcome! If you find any issues or have suggestions for improvements, please feel free to open issues or submit pull requests in the [GitHub repository](https://github.com/buckyhelmsmash/ContactManager).
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Feel free to explore, modify, and enhance the Contact Manager app. Happy coding! 🚀
