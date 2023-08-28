@@ -1,10 +1,11 @@
-import {Text, View} from "react-native";
-import {Button} from '@react-native-material/core';
+import {FlatList, Text, View} from "react-native";
+import {Box, Button, Flex, ListItem, Spacer, Surface} from '@react-native-material/core';
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootParamsList} from "../App";
 import {useSelector} from "react-redux";
 import {RootState} from "../../store/store";
 import {useLayoutEffect} from "react";
+
 
 type ContactListProps = NativeStackScreenProps<RootParamsList, 'ContactList'>
 
@@ -16,17 +17,36 @@ const ContactListScreen = ({navigation}: ContactListProps) => {
         navigation.setOptions({
             headerRight: props => <Text className="text-black text-sm font-bold">{totalContacts} of 200</Text>
         });
-    }, [navigation]);
+    }, [navigation, totalContacts]);
 
 
     return (
-        <View>
-            <Text className={"text-red-700"}>Contact List</Text>
-            <Button
-                title={'Detail'}
-                onPress={() => navigation.navigate("ContactDetail", {id: "123"})}
+        <Flex fill>
+            <FlatList
+                data={contacts}
+                renderItem={({item}) => {
+                    return(
+                        <ListItem
+                            title={item.name}
+                            secondaryText={item.phoneNumber}
+                        />
+                    )
+                }}
             />
-        </View>
+            <Spacer/>
+            <Surface
+                elevation={6}
+                category="medium"
+                style={{ width: '100%', height: 100 }}
+            >
+                <Flex fill center>
+                    <Button
+                        title="Add Contact"
+                        onPress={() => navigation.navigate('ContactAdd')}
+                    />
+                </Flex>
+            </Surface>
+        </Flex>
     )
 }
 
