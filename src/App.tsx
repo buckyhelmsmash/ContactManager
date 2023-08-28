@@ -8,12 +8,14 @@ import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import ContactAddScreen from "./screens/ContactAddScreen";
 import 'react-native-get-random-values'
+import ContactEditScreen from "./screens/ContactEditScreen";
 
 
 export type RootParamsList = {
     ContactList: undefined,
     ContactDetail: { id: string },
-    ContactAdd: undefined
+    ContactAdd: undefined,
+    ContactEdit: { id: string}
 }
 
 const Stack = createNativeStackNavigator<RootParamsList>()
@@ -40,6 +42,11 @@ function App(): React.JSX.Element {
                             name={'ContactAdd'}
                             component={ContactAddScreen}
                             options={{title: 'Add Contact'}}
+                        />
+                        <Stack.Screen
+                            name={'ContactEdit'}
+                            component={ContactEditScreen}
+                            options={{title: 'Edit Contact'}}
                         />
                     </Stack.Navigator>
                 </NavigationContainer>

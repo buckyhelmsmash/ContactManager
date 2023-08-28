@@ -52,7 +52,7 @@ const ContactListScreen = ({navigation}: ContactListProps) => {
                                     </Flex>
                                 </Pressable>
                                 <Pressable
-                                    onPress={() => console.log("🌍 hi")}
+                                    onPress={() => navigation.navigate('ContactEdit', {id: rowData.item.id})}
                                     android_ripple={{
                                         color: 'slate'
                                     }}
